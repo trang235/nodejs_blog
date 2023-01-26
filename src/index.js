@@ -26,15 +26,15 @@ app.use(morgan('combined'));
 //template engine
 app.engine('.hbs', engine({ extname: '.hbs' }));
 app.set('view engine', '.hbs');
-    app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources/views'));
 
 //những trang ko thuộc tài nguyên cụ thể nào
 // home, search, contact
 
 // routes init
-route(    app);
+route(app);
 
 // 127.0.0.1 - localhost
-        app.listen(port, () => {
-            console.log(`Example app listening at http://localhost:${port}`);
-        });
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`);
+});
